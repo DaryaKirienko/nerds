@@ -1,0 +1,435 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 1157px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #eee;
+  padding-top: 50px;
+}
+
+.header-navigation {
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+}
+
+.header-logo {
+  width: 160px;
+  height: 65px;
+}
+
+.header-navigation-list {
+  list-style: none;
+  display: flex;
+  margin: auto 0;
+}
+
+.header-navigation-item {
+  font-weight: 500;
+  margin-right: 45px;
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.header-cart {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  justify-content: end;
+  position: relative;
+}
+
+.header-cart::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/cart-icon.svg");
+  right: 95px;
+}
+
+.header-slider {
+  padding-top: 78px;
+  padding-bottom: 80px;
+  background-image: url(../img/nerds-index-slide1\ 1.png);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+.header-slider-title {
+  max-width: 538px;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.header-slider-description {
+  max-width: 400px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #fff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-button {
+  width: 240px;
+  height: 50px;
+  background: #fb565a;
+  margin-top: 38px;
+}
+
+.products {
+  padding-top: 80px;
+}
+
+.products-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  gap: 100px;
+  margin-bottom: 80px;
+}
+
+.products-image {
+  width: 300px;
+  height: 146px;
+  margin-bottom: 25px;
+}
+
+.products-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.products-description {
+  max-width: 260px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+  margin-top: 16px;
+}
+
+.order-button {
+  width: 160px;
+  height: 50px;
+  margin-top: 32px;
+}
+
+.site-button {
+  background: #fb565a;
+}
+
+.apps-button {
+  background: #00ca74;
+}
+
+.presentation-button {
+  background: #efc849;
+}
+
+.about-us {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 140px;
+  margin-top: 39px;
+  margin-bottom: 73px;
+}
+
+.col-1 {
+  padding-top: 43px;
+}
+
+.about-heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: #000000;
+  max-width: 651px;
+  margin: 0;
+}
+
+.about-description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+  max-width: 646px;
+  margin-top: 32px;
+}
+
+.offers-heading {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #283136;
+  margin-top: 40px;
+  margin-bottom: 23px;
+}
+
+.offers-list {
+  list-style: none;
+  margin: 0;
+  margin-left: 35px;
+  padding: 0;
+}
+
+.offers-item:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.offers-item {
+  position: relative;
+}
+
+.offers-item::before {
+  content: "";
+  position: absolute;
+  left: -34px;
+  top: 8px;
+  width: 25px;
+  height: 2px;
+  background: #fb565a;
+}
+
+.col-2 {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  background-image: url("../img/nerds-illustration.png");
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.benefits-heading {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.benefits-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.benefits-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 103px;
+}
+
+.benefits-item:not(:last-child) {
+  margin-right: 21px;
+}
+
+.percent {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+  color: #000000;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.percent-symbol {
+  position: absolute;
+  top: 4px;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 40px;
+  color: #000000;
+}
+
+.benefit {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #283136;
+}
+
+.clients {
+  margin-bottom: 80px;
+}
+
+.clients-list {
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 46px;
+  margin-bottom: 44px;
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.clients-item {
+  align-self: center;
+  position: relative;
+}
+
+.clients-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 52px;
+  background: #eeeeee;
+  right: -41px;
+  top: 22px;
+}
+
+.clients-image {
+  width: 209px;
+  height: 95px;
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.our-address {
+  background-image: url("../img/map.png");
+  max-height: 416px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+.address-block {
+  width: 319px;
+  height: 308px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+
+.company-name {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.footer-address,
+.footer-telephone {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+  max-width: 230px;
+  margin: 0;
+}
+
+.footer-telephone {
+  text-decoration: none;
+  margin-top: 21px;
+}
+
+.connect-button {
+  border: none;
+  display: inline-block;
+  width: 219px;
+  height: 50px;
+  background: #fb565a;
+  margin-top: 37px;
+}
+
+.footer-contacts {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.social-item {
+  width: 81px;
+  height: 81px;
+  background: linear-gradient(0deg, #e1e1e1, #e1e1e1), #ffffff;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 9px;
+}
+
+.footer-info {
+  margin-left: 139px;
+}
+
+.info-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+  display: block;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+}
+
+.info-description {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #444444;
+}
