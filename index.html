@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,14 +18,31 @@
   <body>
     <header>
       <nav class="header-navigation container">
-        <img class="header-logo" src="img/nerds-logo.svg" alt="logo: nёrds" />
+        <a href="/index.html"
+          ><img
+            class="header-logo"
+            src="img/nerds-logo.svg"
+            alt="logo: nёrds"
+          />
+        </a>
         <ul class="header-navigation-list">
-          <li class="header-navigation-item">Студия</li>
-          <li class="header-navigation-item">Клиенты</li>
-          <li class="header-navigation-item">Магазин</li>
-          <li class="header-navigation-item">Контакты</li>
+          <li class="header-navigation-item">
+            <a class="header-link" href="#">Студия</a>
+          </li>
+          <li class="header-navigation-item">
+            <a class="header-link" href="#">Клиенты</a>
+          </li>
+          <li class="header-navigation-item">
+            <a class="header-link" href="/catalog.html">Магазин</a>
+          </li>
+          <li class="header-navigation-item">
+            <a class="header-link" href="#">Контакты</a>
+          </li>
         </ul>
-        <a class="header-cart" href="#">Корзина</a>
+        <div class="shopping-cart">
+          <img class="cart-image" src="img/cart-icon.svg" alt="" />
+          <a class="header-cart" href="#">Корзина</a>
+        </div>
       </nav>
       <section class="header-slider container">
         <h1 class="header-slider-title">Долго, дорого, скрупулезно.</h1>
@@ -134,22 +151,22 @@
         <ul class="clients-list">
           <li class="clients-item">
             <a class="clients-image" href="#">
-              <img src="img/logo_htmlacademy.png" alt="html academy" />
+              <img src="img/logo_htmlacademy.svg" alt="html academy" />
             </a>
           </li>
           <li class="clients-item">
             <a class="clients-image" href="#">
-              <img src="img/logo_borodinskiy.png" alt="borodinskiy" />
+              <img src="img/logo-borodinskiy.png" alt="borodinskiy" />
             </a>
           </li>
           <li class="clients-item">
             <a class="clients-image" href="#">
-              <img src="img/logo_pink.png" alt="pink" />
+              <img src="img/logo-pink.png" alt="pink" />
             </a>
           </li>
           <li class="clients-item">
             <a class="clients-image" href="#">
-              <img src="img/logo_mishka.png" alt="mishka" />
+              <img src="img/logo-mishkapng.png" alt="mishka" />
             </a>
           </li>
         </ul>
@@ -170,17 +187,73 @@
             <button class="button connect-button">Напишите нам</button>
           </div>
         </div>
+        <!-- <div class="modal-window">
+          <form action="#" method="get">
+            <legend form-title>Напишите нам</legend>
+            <div class="form-wrapper">
+              <label class="form-label" for="user-name">Ваше имя:</label>
+              <input
+                class="form-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+                placeholder="Имя Фамилия"
+                required
+                autofocus
+              />
+
+              <label class="form-label" for="user-mail">Ваш email:</label>
+              <input
+                class="form-input"
+                type="email"
+                id="user-mail"
+                name="user-mail"
+                placeholder="email@example.com "
+              />
+              <label class="form-label" for="letter">Текст письма:</label>
+              <textarea
+                class="form-input"
+                name="letter"
+                id="letter"
+                cols="30"
+                rows="10"
+                placeholder="В свободной форме"
+              ></textarea>
+            </div>
+            <button type="submit" class="button submit-form-button">
+              Отправить
+            </button>
+          </form>
+        </div> -->
       </section>
       <section class="footer-contacts container">
         <ul class="social-list">
           <li class="social-item">
-            <img src="img/vk-icon.svg" width="26" height="15" alt="vk" />
+            <img
+              class="social-logo"
+              src="img/vk-icon.svg"
+              width="26"
+              height="15"
+              alt="vk"
+            />
           </li>
           <li class="social-item">
-            <img src="img/fb-icon.svg" width="12" height="22" alt="fb" />
+            <img
+              class="social-logo"
+              src="img/fb-icon.svg"
+              width="12"
+              height="22"
+              alt="fb"
+            />
           </li>
           <li class="social-item">
-            <img src="img/insta-icon.svg" width="21" height="21" alt="insta" />
+            <img
+              class="social-logo"
+              src="img/insta-icon.svg"
+              width="21"
+              height="21"
+              alt="insta"
+            />
           </li>
         </ul>
         <div class="footer-info">
