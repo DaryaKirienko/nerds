@@ -14,11 +14,18 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="./script/slider.js" defer></script>
+    <script src="./script/modal.js" defer></script>
+    <script src="./script/map.js" defer></script>
   </head>
   <body>
     <header>
       <nav class="header-navigation container">
-        <a href="/index.html"
+        <a href="./index.html"
           ><img
             class="header-logo"
             src="img/nerds-logo.svg"
@@ -45,12 +52,51 @@
         </div>
       </nav>
       <section class="header-slider container">
-        <h1 class="header-slider-title">Долго, дорого, скрупулезно.</h1>
-        <p class="header-slider-description">
-          Математически выверенный дизайн для вашего сайта или мобильного
-          приложения.
-        </p>
-        <a class="button header-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+        <div class="slider-wrapper slider-wrapper-1 slider-active">
+          <h1 class="header-slider-title">Долго, дорого, скрупулезно.</h1>
+          <p class="header-slider-description">
+            Математически выверенный дизайн для&nbsp;вашего&nbsp;сайта или
+            мобильного приложения.
+          </p>
+          <a class="button header-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          <div class="slider-controls">
+            <button
+              class="slider-button first-button active-slide-button"
+            ></button>
+            <button class="slider-button second-button"></button>
+            <button class="slider-button third-button"></button>
+          </div>
+        </div>
+        <div class="slider-wrapper slider-wrapper-2">
+          <h1 class="header-slider-title">Любим математику как никто другой</h1>
+          <p class="header-slider-description">
+            Никакого креатива, только математические формулы для расчета
+            идеальных пропорций
+          </p>
+          <a class="button header-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          <div class="slider-controls">
+            <button class="slider-button first-button"></button>
+            <button
+              class="slider-button second-button active-slide-button"
+            ></button>
+            <button class="slider-button third-button"></button>
+          </div>
+        </div>
+        <div class="slider-wrapper slider-wrapper-3">
+          <h1 class="header-slider-title">Только ночь, только хардкор</h1>
+          <p class="header-slider-description">
+            Работать днем, как все? Мы против этого. Ближе&nbsp;к&nbsp;полуночи
+            работа только начинается.
+          </p>
+          <a class="button header-button" href="#">УЗНАТЬ БОЛЬШЕ</a>
+          <div class="slider-controls">
+            <button class="slider-button first-button"></button>
+            <button class="slider-button second-button"></button>
+            <button
+              class="slider-button third-button active-slide-button"
+            ></button>
+          </div>
+        </div>
       </section>
     </header>
 
@@ -81,7 +127,7 @@
             />
             <h3 class="products-title">Приложения</h3>
             <p class="products-description">
-              Покорите топ-10 приложений в AppStore и Google Play
+              Покорите топ-10 приложений в&nbsp;AppStore и Google Play
             </p>
             <a class="button order-button apps-button" href="#">Заказать</a>
           </li>
@@ -173,8 +219,9 @@
         <hr width="1158" color="#EEEEEE" />
       </section>
     </main>
-    <footer>
+    <footer class="main-footer">
       <section class="our-address">
+        <div id="map-iframe" class="map-iframe"></div>
         <div class="container">
           <div class="address-block">
             <strong class="company-name">NЁRDS DESIGN STUDIO</strong>
@@ -187,32 +234,42 @@
             <button class="button connect-button">Напишите нам</button>
           </div>
         </div>
-        <!-- <div class="modal-window">
+        <div class="modal-window">
           <form action="#" method="get">
-            <legend form-title>Напишите нам</legend>
+            <div class="form-header">
+              <legend class="form-title">Напишите нам</legend>
+              <button class="close-button"></button>
+            </div>
             <div class="form-wrapper">
-              <label class="form-label" for="user-name">Ваше имя:</label>
-              <input
-                class="form-input"
-                type="text"
-                id="user-name"
-                name="user-name"
-                placeholder="Имя Фамилия"
-                required
-                autofocus
-              />
+              <div class="row-1">
+                <div class="form-col">
+                  <label class="form-label" for="user-name">Ваше имя:</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Имя Фамилия"
+                    pattern="[A-Za-zА-Яа-яЁё]{3,}"
+                    autofocus
+                  />
+                </div>
+                <div class="form-col">
+                  <label class="form-label" for="user-mail">Ваш email:</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="user-mail"
+                    name="user-mail"
+                    placeholder="email@example.com "
+                    required
+                  />
+                </div>
+              </div>
 
-              <label class="form-label" for="user-mail">Ваш email:</label>
-              <input
-                class="form-input"
-                type="email"
-                id="user-mail"
-                name="user-mail"
-                placeholder="email@example.com "
-              />
               <label class="form-label" for="letter">Текст письма:</label>
               <textarea
-                class="form-input"
+                class="form-input text-input"
                 name="letter"
                 id="letter"
                 cols="30"
@@ -224,7 +281,7 @@
               Отправить
             </button>
           </form>
-        </div> -->
+        </div>
       </section>
       <section class="footer-contacts container">
         <ul class="social-list">
