@@ -10,6 +10,25 @@ body {
   margin: 0 auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+hr {
+  width: 1158px;
+  background-color: #eeeeee;
+  opacity: 0.2;
+}
+
 header {
   background-color: #eee;
   padding-top: 50px;
@@ -973,7 +992,8 @@ header {
   display: flex;
 }
 
-.project-card:hover::before {
+.project-card:hover::before,
+.project-card:hover {
   opacity: 1;
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
@@ -998,6 +1018,14 @@ header {
   color: #000000;
   margin: 0;
   margin-bottom: 12px;
+}
+
+.card-title:hover {
+  color: #fb565a;
+}
+
+.card-title:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .card-description {
@@ -1131,6 +1159,7 @@ header {
   font-size: 45px;
   line-height: 53px;
   color: #000000;
+  margin: 0;
 }
 
 .close-button {

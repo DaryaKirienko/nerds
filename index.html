@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nёrds</title>
+    <title>Дизайн-студия Nёrds</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,12 +12,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/min.style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
-    <script
-      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"
-      type="text/javascript"
-    ></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./script/slider.js" defer></script>
     <script src="./script/modal.js" defer></script>
     <script src="./script/map.js" defer></script>
@@ -102,11 +99,12 @@
 
     <main class="container">
       <section class="products">
+        <h2 class="visually-hidden">Наши продукты</h2>
         <ul class="products-list">
           <li class="products-item">
             <img
               class="products-image"
-              src="img/illustration-1 1.jpg"
+              src="img/illustration-1.jpg"
               alt="Веб-сайты"
               width="300"
               height="146"
@@ -120,7 +118,7 @@
           <li class="products-item">
             <img
               class="products-image"
-              src="img/illustration-2 1.jpg"
+              src="img/illustration-2.jpg"
               alt="Приложения"
               width="300"
               height="146"
@@ -134,7 +132,7 @@
           <li class="products-item">
             <img
               class="products-image"
-              src="img/illustration-3 1.jpg"
+              src="img/illustration-3.jpg"
               alt="Презентации"
               width="300"
               height="146"
@@ -148,7 +146,7 @@
             >
           </li>
         </ul>
-        <hr width="1158" color="#EEEEEE" />
+        <hr />
       </section>
       <section class="about-us">
         <div class="col-1">
@@ -193,7 +191,8 @@
         </div>
       </section>
       <section class="clients">
-        <hr width="1158" color="#EEEEEE" />
+        <h2 class="visually-hidden">Наши клиенты</h2>
+        <hr />
         <ul class="clients-list">
           <li class="clients-item">
             <a class="clients-image" href="#">
@@ -216,11 +215,12 @@
             </a>
           </li>
         </ul>
-        <hr width="1158" color="#EEEEEE" />
+        <hr />
       </section>
     </main>
     <footer class="main-footer">
       <section class="our-address">
+        <h2 class="visually-hidden">Как нас найти</h2>
         <div id="map-iframe" class="map-iframe"></div>
         <div class="container">
           <div class="address-block">
@@ -237,7 +237,7 @@
         <div class="modal-window">
           <form action="#" method="get">
             <div class="form-header">
-              <legend class="form-title">Напишите нам</legend>
+              <h2 class="form-title">Напишите нам</h2>
               <button class="close-button"></button>
             </div>
             <div class="form-wrapper">
@@ -284,6 +284,7 @@
         </div>
       </section>
       <section class="footer-contacts container">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
         <ul class="social-list">
           <li class="social-item">
             <img

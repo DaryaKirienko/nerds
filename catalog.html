@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nёrds</title>
+    <title>Дизайн-студия Nёrds</title>
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,9 +12,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/min.style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
     <script src="./script/modal.js" defer></script>
+    <script src="./script/map.js" defer></script>
   </head>
   <body>
     <header>
@@ -51,6 +53,7 @@
     </header>
     <main class="container main">
       <section class="filters">
+        <h2 class="visually-hidden">Фильтры для поиска</h2>
         <form action="#" method="get">
           <fieldset class="price-filter">
             <legend class="price-title filter-title">Стоимость:</legend>
@@ -67,7 +70,8 @@
                   от <input type="number" name="min-price" value="0" />
                 </label>
                 <label class="max-price">
-                  до <input type="number" name="max-price" value="15000" />
+                  до
+                  <input type="number" name="max-price" value="150000" />
                 </label>
               </div>
             </div>
@@ -181,6 +185,7 @@
         <button class="button show-button">ПОКАЗАТЬ</button>
       </section>
       <section class="filter-result">
+        <h2 class="visually-hidden">Фильры сортировки</h2>
         <div class="sorting-filter">
           <h3 class="sorting-title filter-title sort-heading">Сортировать:</h3>
           <div class="sorting-block">
@@ -211,7 +216,7 @@
             <li class="project-card">
               <img class="card-image" src="img/sedona.jpg" alt="sedona" />
               <div class="card-info">
-                <h3 class="card-title">Sedona</h3>
+                <a class="card-title">Sedona</a>
                 <p class="card-description">Информационный сайт для туристов</p>
                 <a class="card-price button" href="#">9 900 ₽</a>
               </div>
@@ -219,7 +224,7 @@
             <li class="project-card">
               <img class="card-image" src="img/pink_app.png" alt="pink app" />
               <div class="card-info">
-                <h3 class="card-title">Pink App</h3>
+                <a class="card-title">Pink Ap</a>
                 <p class="card-description">
                   Продуктовый лендинг приложения для iOS и Android
                 </p>
@@ -233,7 +238,7 @@
                 alt="borodinskiy"
               />
               <div class="card-info">
-                <h3 class="card-title">Barbershop</h3>
+                <a class="card-title">Barbershop</a>
                 <p class="card-description">
                   Сайт салона красоты. Для мужчин, да.
                 </p>
@@ -243,7 +248,7 @@
             <li class="project-card">
               <img class="card-image" src="img/mishka.png" alt="mishka" />
               <div class="card-info">
-                <h3 class="card-title">MISHKA</h3>
+                <a class="card-title">MISHKA</a>
                 <p class="card-description">Интернет-магазин вязаных игрушек</p>
                 <a class="card-price button" href="#">9 900 ₽</a>
               </div>
@@ -251,7 +256,7 @@
             <li class="project-card">
               <img class="card-image" src="img/plus.png" alt="a plus" />
               <div class="card-info">
-                <h3 class="card-title">A Plus</h3>
+                <a class="card-title">A Plus</a>
                 <p class="card-description">
                   Лендинг курсов повышения квалификации
                 </p>
@@ -261,7 +266,7 @@
             <li class="project-card">
               <img class="card-image" src="img/kvast.png" alt="kvast" />
               <div class="card-info">
-                <h3 class="card-title">КВАСТ</h3>
+                <a class="card-title">КВАСТ</a>
                 <p class="card-description">
                   Промо-сайт производителя крафтового кваса
                 </p>
@@ -280,6 +285,8 @@
     </main>
     <footer>
       <section class="our-address">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <div id="map-iframe" class="map-iframe"></div>
         <div class="container">
           <div class="address-block">
             <strong class="company-name">NЁRDS DESIGN STUDIO</strong>
@@ -292,8 +299,57 @@
             <button class="button connect-button">Напишите нам</button>
           </div>
         </div>
+        <div class="modal-window">
+          <form action="#" method="get">
+            <div class="form-header">
+              <h2 class="form-title">Напишите нам</h2>
+              <button class="close-button"></button>
+            </div>
+            <div class="form-wrapper">
+              <div class="row-1">
+                <div class="form-col">
+                  <label class="form-label" for="user-name">Ваше имя:</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="user-name"
+                    name="user-name"
+                    placeholder="Имя Фамилия"
+                    pattern="[A-Za-zА-Яа-яЁё]{3,}"
+                    autofocus
+                  />
+                </div>
+                <div class="form-col">
+                  <label class="form-label" for="user-mail">Ваш email:</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="user-mail"
+                    name="user-mail"
+                    placeholder="email@example.com "
+                    required
+                  />
+                </div>
+              </div>
+
+              <label class="form-label" for="letter">Текст письма:</label>
+              <textarea
+                class="form-input text-input"
+                name="letter"
+                id="letter"
+                cols="30"
+                rows="10"
+                placeholder="В свободной форме"
+              ></textarea>
+            </div>
+            <button type="submit" class="button submit-form-button">
+              Отправить
+            </button>
+          </form>
+        </div>
       </section>
       <section class="footer-contacts container">
+        <h2 class="visually-hidden">Мы в соцсетях</h2>
         <ul class="social-list">
           <li class="social-item">
             <img
